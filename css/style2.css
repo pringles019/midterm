@@ -1,0 +1,129 @@
+
+
+.border {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: 40px solid white;
+
+    position: absolute;;
+}
+
+.poster {
+    width: 95%;
+    height: 90%;
+    position: absolute;;
+    overflow: hidden;
+    filter: blur(5px);
+    
+   /* border-radius: 50px;*/
+
+    
+    left: calc(50% - 1459.2px / 2);
+    top: calc(50% - 684px / 2);
+
+    animation: 5s moving ease-in-out;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving {
+    0% {
+        width: 95%;
+        left: calc(50% - 1459.2px / 2);
+    }
+
+    35% {
+        width: 96%;
+        left: calc(50% - 1461.2px / 2);
+    }
+
+    75% {
+        width: 95.5%;
+        left: calc(50% - 1461.0px / 2);
+    }
+
+    100% {
+        width: 95%;
+        left: calc(50% - 1459.2px / 2);
+    }
+}
+
+.poster1 {
+    width: auto;
+    height: 90%;
+    position: absolute;;
+    overflow: hidden;
+
+    border-top: 40px solid white;
+    border-bottom: 40px solid white;
+
+    left: calc(50% - 738px / 2);
+    top: calc(50% - 687px / 2);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+
+body {
+  display: table;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 90px;
+  font-weight: 300;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  display: table-cell;
+  vertical-align: text-top;
+  text-align: center;
+  width: 800px;
+}
+
+ul {
+    position: relative;
+    top: 70px;
+}
+
+li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span:before, span:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fff;
+}
+
+span:before {
+  left: -2.5px;
+}
+span:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}

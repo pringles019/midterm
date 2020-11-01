@@ -1,0 +1,196 @@
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-top: 50px solid black;
+    border-bottom: 50px solid black;
+    overflow: hidden;
+}
+
+
+.time {
+     border-radius: 100%;
+     border: 3px solid black;
+    background: none;
+    float: left;
+    margin-left: 65px;
+    margin-top: 53px;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+}
+
+.timer1 {
+    background: #000;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    width: 2%;
+    z-index: 8;
+
+    animation: rotate 0.8s infinite linear;
+    animation-play-state: running;
+}
+
+.timer2 {
+        background: #000;
+        height: 31%;
+        left: 49.5%;
+        position: absolute;
+        top: 47%;
+        right: 28%;
+        transform-origin: 22% 14%;
+        width: 2%;
+        z-index: 8;
+    
+        animation: rotate 4.8s infinite linear;
+        animation-play-state: running;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.pause_button {
+    width: 72px;
+    height: 73px;
+
+    position: absolute;
+    float: left;
+    margin-top: calc(660px/2 - 73px);
+    margin-left: calc(50% - 26px);
+
+    background: none;
+
+    animation-name: change;
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes change {
+    0% {
+        background: none;
+        opacity: 1;
+    }
+
+    100% {
+        background: #000;
+        opacity: 0;
+    }
+}
+
+.pause_button.active {
+
+}
+
+.name {
+    position: absolute;
+    float: left;
+    margin-left: 145px;
+    margin-top: 36px; 
+}
+
+   /* animation-name: flash;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+   0%, 50%, 100% {
+       opacity: 1;
+   }
+   25%, 75% {
+       opacity: 0;
+   }
+
+   }
+*/
+
+.main {
+    width: 600px;
+    height: 20px;
+    position: absolute;
+    float: left;
+    margin-left: 863px;
+    margin-top: 260px;
+
+    background: none;
+
+    animation: moving;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes moving {
+    0% {
+        margin-left: 863px;
+    }
+    50% {
+        margin-left: 823px;
+    }
+    100% {
+        margin-left: 863px;
+    }
+}
+
+.b {
+    position: absolute;
+    float: left;
+    margin-left: 1195px;
+    margin-top: 250px; 
+    opacity: 1;
+
+    animation-name: flash;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+   0%, 50%, 100% {
+       opacity: 1;
+   }
+   25%, 75% {
+       opacity: 0;
+   }
+
+   }
+
+
+
+.b2 {
+    position: absolute;
+    float: left;
+    margin-left: 229px;
+    margin-top: 475px;
+    opacity: 0;
+
+    animation-name: click;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+@keyframes click {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.back {
+    position: absolute;
+    float: left;
+    margin-left: 91px;
+    margin-top: 36px;
+}
